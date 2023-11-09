@@ -13,6 +13,7 @@ def window():
 def test_check_text(window):
     browser.element('[name="q"]').should(be.blank).type('yashaka/selene').press_enter()
     browser.element('[id="search"]').should(have.text('Selene - User-oriented Web UI browser tests in Python'))
+    browser.quit()
 
 def test_no_result(window):
     browser.element('[name="q"]').should(be.blank).type('yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy432424').press_enter()
